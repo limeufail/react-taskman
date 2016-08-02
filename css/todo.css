@@ -1,0 +1,241 @@
+@font-face {
+  font-family: 'PT Sans Narrow';
+  font-style: normal;
+  font-weight: 400;
+  src: local('PT Sans Narrow'), local('PTSans-Narrow'), url(font/PT_Sans-Narrow-Web-Regular.ttf) format('truetype');
+}
+
+body{
+	font-family: 'PT Sans Narrow', sans-serif;
+	margin: 0;
+}
+.container{
+  font-size: 0.8em;
+}
+.header{ 
+  box-shadow: 0 1px 0 #000;
+  font-size: 16px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+.header__menu{
+	background-color: #DB4437;
+	display: flex;
+	justify-content: center;
+	list-style: none;
+	margin: 0;
+	padding: 15px;
+}
+
+.header__menu > li{
+	display: inline-block;
+	margin-right: 20px;
+}
+
+.header__menu > li a {
+ 	text-decoration: none;
+ 	color: #fff;
+}
+
+.header__menu > li a span{
+  display: none;
+}
+/* active todo list */
+.active-todos__wrap{
+  margin-top: 60px;
+}
+.active-todos__title{
+	padding: 0 15px;
+    border-bottom: 1px #f7eded solid;
+}
+.active-todos__content ul{
+	list-style: none;
+}
+.active-todos__content ul > li{
+	align-items: center;
+  display: flex;
+  border-bottom: 1px #de9d9d solid;
+  padding: 10px 0;
+}
+
+.active-todos__content ul > li button{
+  border-radius: 100%;
+  padding: 10px 14px;
+  border: 0;
+  max-width: 50px;
+}
+.active-todos__content ul > li > * {
+  flex: 1;
+}
+
+/* completed todo list */
+.completed-todos__wrap{
+	margin-top: 60px;
+}
+.complete-todos__title{
+	padding: 0 15px;
+    border-bottom: 1px #f7eded solid;
+}
+.complete-todos__content ul{
+	list-style: none;
+}
+.complete-todos__content ul > li{
+	padding: 10px 0;
+    border-bottom: 1px #de9d9d solid;
+}
+
+/* Category */
+.category__wrap {
+  margin-top: 60px;
+}
+.category__title{
+  padding: 0 15px;
+  border-bottom: 1px #f7eded solid;
+}
+.category__content ul {
+  list-style: none;
+}
+/* todo form */
+.form-cat__wrap,
+.form-todos__wrap{
+	margin: 0 10px;
+}
+.form-cat,
+.form-todos{
+}
+.form-input__control{
+	display: flex;
+	flex-flow: column wrap;
+	flex: 1;
+}
+
+.form-cat .form-input__control{
+  width: 233px;
+}
+
+.form-input__control-group{
+	display: flex;
+	flex-flow: column wrap;
+	flex: 1;
+	margin: 3px 0;
+}
+.form__btn{
+    border-radius: 2px;
+    width: 115px;
+    margin-right: 3px;
+	padding: 7px 10px;
+}
+.form__btn:disabled{
+	cursor: default;
+    background-image: none;
+    opacity: 0.65;
+    filter: alpha(opacity=65);
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+.form__btn--blue{
+	padding: 6px 10px;
+	color: #ffffff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    background-color: #006dcc;
+    background-image: -moz-linear-gradient(top, #0088cc, #0044cc);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0088cc), to(#0044cc));
+    background-image: -webkit-linear-gradient(top, #0088cc, #0044cc);
+    background-image: -o-linear-gradient(top, #0088cc, #0044cc);
+    background-image: linear-gradient(to bottom, #0088cc, #0044cc);
+    background-repeat: repeat-x;
+    border-color: #0044cc #0044cc #002a80;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+}
+.form__btn--gray{
+    color: #333333;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+    cursor: pointer;
+    background-color: #f5f5f5;
+    background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+    background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+    background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+    background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
+    background-repeat: repeat-x;
+    border: 1px solid #cccccc;
+    border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    border-bottom-color: #b3b3b3;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+.form-cat select,
+.form-todos select,
+.form-cat textarea,
+.form-todos textarea,
+.form-cat input[type="text"],
+.form-todos input[type="text"],
+.form-cat input[type="date"],
+.form-todos input[type="date"],
+.form-cat input[type="number"],
+.form-todos input[type="number"]{
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  padding: 5px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+     -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border linear 0.2s, box-shadow linear 0.2s;
+     -moz-transition: border linear 0.2s, box-shadow linear 0.2s;
+       -o-transition: border linear 0.2s, box-shadow linear 0.2s;
+          transition: border linear 0.2s, box-shadow linear 0.2s;
+}
+
+.form-cat input[type="text"],
+.form-todos input[type="text"]{
+	height: 20px;
+}
+
+.form-cat select,
+.form-todos select{
+	height: 32px;
+}
+
+.form-cat select:focus,
+.form-todos select:focus,
+.form-cat textarea:focus,
+.form-todos textarea:focus,
+.form-cat input[type="text"]:focus,
+.form-todos input[type="text"]:focus,
+.form-cat input[type="date"]:focus,
+.form-todos input[type="date"]:focus,
+.form-cat input[type="number"]:focus,
+.form-todos input[type="number"]:focus{
+  border-color: rgba(82, 168, 236, 0.8);
+  outline: 0;
+  outline: thin dotted \9;
+  /* IE6-9 */
+
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+     -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+}
+
+
+@media only screen and (min-width: 736px) {
+  .header__menu > li a span{
+    display: inline-block;
+    margin-left: 3px;
+  }
+  .form-input__control{
+    flex-flow: row nowrap;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .container{
+    font-size: 1em;
+  }
+}
